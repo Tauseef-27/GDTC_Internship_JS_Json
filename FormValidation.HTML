@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        GoDigital Employee Form
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></head>
+
+<body>
+    <div class="container">
+
+
+	<h1><center>GoDigital Employee Form</center></h1>
+	<hr>
+			<div class="employee-form">
+                <form onsubmit="event.preventDefault();onFormSubmit() ;" autocomplete="off">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text"  class="form-control" name="firstname" id="fname">
+                        <small class="validation-error hide" id="firstnameValidationError" style="color: red;">This field is required.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Middle Name</label>
+                        <input type="text" class="form-control" name="middlename" id="mname">
+                        <small class="validation-error hide" id="middlenameValidationError" style="color: red;">This field is required.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" name="lastname" id="lname">
+                        <small class="validation-error hide" id="lastnameValidationError" style="color: red;">This field is required.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Number</label>
+                        <!-- <label class="validation-error hide" id="numberValidationError">This field is required.</label> -->
+                        <input type="text" class="form-control" name="number" id="num" 
+                        pattern="[1-9]{1}[0-9]{9}" title="Enter 10 digit mobile number" placeholder="Mobile number" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <!-- <label class="validation-error hide" id="emailValidationError">This field is required.</label> -->
+                        <input type="text" class="form-control" name="email" id="email"
+                        pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address" required>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-list-check"></i> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-check" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                          </svg>
+                          SUBMIT
+                      </button>
+                </form>
+		</div>
+		<br/>
+		<div class = "employees-table">
+                <table class="table table-striped" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Middle Name</th>
+                            <th>Last Name</th>
+                            <th>Number</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+        </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
